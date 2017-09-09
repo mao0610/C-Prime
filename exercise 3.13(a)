@@ -1,0 +1,39 @@
+#include <string>
+#include <iostream>
+#include <vector>
+using namespace std;  //make some declaration
+int main()
+{
+	vector<int> ivec;
+	int ival;
+	cout << "enter numbers(Ctrl + Z TO END)" << endl;
+	while (cin >> ival)
+		ivec.push_back(ival); //add all the numbers
+	if (ivec.size() == 0)
+	{
+		cout << "no elements?" << endl;
+		return -1;
+	}
+	cout << "some of each pair of adjacent elements" << endl;
+	for (vector<int>::size_type ix=0; ix < ivec.size() - 1; ix = ix + 2)
+	{
+		cout << ivec[ix] + ivec[ix + 1] << "\t";
+		if ((ix + 1) % 6 == 0)
+		cout << endl;  
+	} // add the adjecent numbers together
+	if (ivec.size() % 2 != 0)
+		cout << "there is another elements that haven't been summed "
+		<< "and it's value is "
+		<< ivec[ivec.size() - 1]
+		<< endl;
+
+	
+
+
+
+	while (true)
+	{
+
+	}
+	return 0;
+}
